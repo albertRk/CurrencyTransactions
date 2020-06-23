@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from "./components/Header";
+import ExchangeRate from "./components/ExchangeRate";
+import TransactionData from "./components/TransactionData";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const title: string = "Currency transactions";
+    const subtitle: string = "Manage currency transactions (PLN/EUR)";
+    return (
+        <ErrorBoundary>
+            <div className="grid-container">
+                <div className={"grid-header"}>
+                    <Header subtitle={subtitle}>{title}</Header>
+                </div>
+                <div className={"grid-exchange"}>
+                    <ExchangeRate/>
+                </div>
+                <div className={"grid-transactions"}>
+                    <TransactionData/>
+                </div>
+            </div>
+        </ErrorBoundary>
+    );
 }
 
 export default App;

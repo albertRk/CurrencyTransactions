@@ -1,0 +1,43 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  @media only screen and (max-width: 1100px) {
+    grid-template-columns: 54% auto;
+  }
+  grid-template-rows: 244px auto;
+  justify-items: stretch;
+  align-items: stretch;
+  height: 100%;
+  background-color: #242424;
+  padding: 0 140px 0 140px;
+  row-gap: 20px;
+  column-gap: 80px;
+  @media only screen and (max-width: 1240px) {
+    padding: 0 70px 0 70px;
+    column-gap: 40px;
+  }
+}
+
+.grid-header {
+  grid-column: auto / span 1;
+  @media only screen and (max-width: 1000px) {
+    grid-column: auto / span 2;
+  }
+}
+
+.grid-exchange {
+  grid-column: auto / span 1;
+  @media only screen and (max-width: 1000px) {
+    grid-column: auto / span 2;
+    margin-top: -100px;
+    margin-bottom: 100px;
+  }
+}
+
+.grid-transactions {
+  grid-column: auto / span 2;
+  padding-top: 40px;
+  @media only screen and (max-width: 1000px) {
+    padding: 0;
+  }
+}

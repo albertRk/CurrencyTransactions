@@ -1,0 +1,16 @@
+.transactions-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+  justify-items: stretch;
+  align-items: stretch;
+  column-gap: 80px;
+}
+
+.transactions-data {
+  margin-top: -100px;
+}
+
+.most-valuable {
+  align-self: flex-start;
+  margin: 0 0 64px 0;
+}
